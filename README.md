@@ -28,3 +28,11 @@ ENV=development
 ```shell
 go run main.go
 ```
+
+# build stage
+go build -o app ./
+
+# start stage
+./app
+
+export const BASE_URL = import.meta.env.MODE === "development" ? "http://localhost:5000/api" : "/api";
